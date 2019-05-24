@@ -1,7 +1,7 @@
 #!/bin/bash
 # chmod +x /path/wifiKeepalive.sh
 # sudo nano /etc/crontab
-# * * * * * /bin/bash /home/pi/RPIUtilities/wifiKeepalive.sh >/dev/null 2>&1
+# */5 * * * * /bin/bash /home/pi/RPIUtilities/wifiKeepalive.sh >/dev/null 2>&1
 # or directly
 # sudo bash wifiKeepalive.sh
 # force stop 
