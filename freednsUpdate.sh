@@ -1,5 +1,7 @@
 #!/bin/sh
 #FreeDNS updater script
+#sudo apt-get update
+#sudo apt-get install dnsutils
 
 UPDATEURL="http://freedns.afraid.org/dynamic/update.php?_YOURAPIKEYHERE_"
 DOMAIN="_YOURDOMAINHERE_"
