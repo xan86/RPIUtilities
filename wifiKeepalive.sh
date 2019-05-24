@@ -1,7 +1,7 @@
 #!/bin/bash
 # chmod +x /path/wifiKeepalive.sh
-# nano /etc/crontab
-# */5 *   * * *   root    /path/wifiKeepalive.sh
+# sudo nano /etc/crontab
+# */5 * * * * bash /path/wifiKeepalive.sh
 # force stop 
 # ifdown --force wlan0
 # and try
