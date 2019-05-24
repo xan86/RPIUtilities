@@ -8,21 +8,16 @@
 # sudo ifconfig wlan0 down
 # and try
 
-
-# The IP for the server you wish to ping (the gateway ip is enough to test wifi)
 #SERVER=$(/sbin/ip route | awk '/default/ { print $3 }')
 SERVER=8.8.8.8
+res=$(ping -c1 192.168.2.100 | grep 64)
 
-# Only send two pings, sending output to /dev/null
-echo ping $SERVER
-ping -c2 ${SERVER} > /dev/null
-
-# If the return code from ping ($?) is not 0 (meaning there was an error)
-#if [ $? != 0 ]
-if [ $? == "connect: Network is unreachable" ]
+if [ -z "$res" ]
 then
     # Restart the wireless interface
-    echo "print failed restarting wlan0"
+    echo "ping failed, restarting wlan0"
     ifconfig wlan0 down
     ifconfig wlan0 up
+else
+    echo "wifi ok"
 fi
