@@ -10,7 +10,8 @@
 
 
 # The IP for the server you wish to ping (the gateway ip is enough to test wifi)
-SERVER=$(/sbin/ip route | awk '/default/ { print $3 }')
+#SERVER=$(/sbin/ip route | awk '/default/ { print $3 }')
+SERVER=8.8.8.8
 
 # Only send two pings, sending output to /dev/null
 ping -c2 ${SERVER} > /dev/null
