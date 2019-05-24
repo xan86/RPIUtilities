@@ -17,7 +17,7 @@ ping -c2 ${SERVER} > /dev/null
 echo ping $SERVER
 
 # If the return code from ping ($?) is not 0 (meaning there was an error)
-if [ $? != 0 ] && [ $SERVER != "" ]
+if [ $? != 0 ] && [ ! -n "$SERVER"]
 then
     # Restart the wireless interface
     echo "print failed restarting wlan0"
