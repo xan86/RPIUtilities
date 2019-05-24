@@ -11,9 +11,9 @@
 #SERVER=8.8.8.8
 #Let's do local ping and do not disturbe google
 SERVER=$(/sbin/ip route | awk '/default/ { print $3 }')
-echo "Server to ping" $SERVER
+echo "Server to ping:" $SERVER
 res=$(ping -c1 192.168.2.100 | grep 64)
-echo "result" $res
+echo "Result:" $res
 
 if [ -z "$res" ]
 then
