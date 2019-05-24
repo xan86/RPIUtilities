@@ -14,11 +14,12 @@
 SERVER=8.8.8.8
 
 # Only send two pings, sending output to /dev/null
-ping -c2 ${SERVER} > /dev/null
 echo ping $SERVER
+ping -c2 ${SERVER} > /dev/null
 
 # If the return code from ping ($?) is not 0 (meaning there was an error)
-if [ $? != 0 ] && [ ! -n "$SERVER"]
+#if [ $? != 0 ]
+if [ $? == "connect: Network is unreachable" ]
 then
     # Restart the wireless interface
     echo "print failed restarting wlan0"
