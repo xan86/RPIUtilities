@@ -20,6 +20,7 @@ then
     # Restart the wireless interface
     echo "ping failed, restarting wlan0"
     ifconfig wlan0 down
+    sleep 5
     ifconfig wlan0 up
 else
     echo "wifi ok"
