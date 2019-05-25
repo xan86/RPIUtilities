@@ -1,7 +1,7 @@
 #!/bin/bash
 # chmod +x /path/wifiKeepalive.sh
 # sudo nano /etc/crontab
-# */5 * * * * /bin/bash /home/pi/RPIUtilities/wifiKeepalive.sh >/dev/null 2>&1
+# */10 * * * * /bin/bash /home/pi/RPIUtilities/wifiKeepalive.sh >/dev/null 2>&1
 # or directly
 # sudo bash wifiKeepalive.sh
 # force stop 
@@ -12,7 +12,7 @@
 #Let's do local ping and do not disturbe google
 SERVER=$(/sbin/ip route | awk '/default/ { print $3 }')
 echo "Server to ping:" $SERVER
-res=$(ping -c1 192.168.2.100 | grep 64)
+res=$(ping -c1 $SERVER | grep 64)
 echo "Result:" $res
 
 if [ -z "$res" ]
