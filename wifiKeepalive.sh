@@ -1,10 +1,10 @@
 #!/bin/bash
 # chmod +x /path/wifiKeepalive.sh
 # sudo nano /etc/crontab
-# */5 * * * * /bin/bash /home/pi/RPIUtilities/wifiKeepalive.sh >/dev/null 2>&1
+# */10 * * * * /home/pi/RPIUtilities/wifiKeepalive.sh >/dev/null 2>&1
 # or directly
 # sudo bash wifiKeepalive.sh
-# force stop 
+# force stop
 # sudo ifconfig wlan0 down
 # and try
 
