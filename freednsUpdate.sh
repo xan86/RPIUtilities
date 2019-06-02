@@ -4,7 +4,7 @@
 #sudo apt-get install dnsutils
 #sudo crontab -e 
 #and add
-#*/10 * * * * /cartelle/script.sh
+#*/10 * * * * /path/script.sh
 
 UPDATEURL="http://freedns.afraid.org/dynamic/update.php?_YOURAPIKEYHERE_"
 DOMAIN="_YOURDOMAINHERE_"
