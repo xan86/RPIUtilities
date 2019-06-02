@@ -20,8 +20,9 @@ echo "DNS check"
 registered=$(cat /home/pi/externalip.txt)
 current=$(upnpc -l | grep ExternalIP | cut -d'=' -f2 | cut -d' ' -f2)
 
-echo "DNS IP: $registered" 
-echo "ROUTER IP: $current" 
+echo "DNS IP: $registered"
+echo "ROUTER IP: $current"
+
 # $current = "" (when modem not connected)
 [ "$current" != "" ] && [ "$current" != "$registered" ] && {
 	wget -q -O /dev/null $UPDATEURL
