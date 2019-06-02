@@ -7,4 +7,4 @@ FTP=21
 SSHE=22
 SSH=22
 upnpc -d $HTTPE TCP $HTTPEB TCP $FTPE TCP $FTP TCP $SSHE TCP $SSH TCP >/dev/null 2>&1
-echo "port reset executed"
+echo "port reset done"
