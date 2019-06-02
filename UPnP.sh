@@ -15,5 +15,6 @@ $(upnpc -a $ip $HTTP $HTTPE TCP >/dev/null 2>&1)
 #$(upnpc -a $ip $FTP $FTPE TCP >/dev/null 2>&1)
 #$(upnpc -a $ip $SSH $SSHE TCP >/dev/null 2>&1)
 #$(upnpc -a $ip $HTTP $HTTPE TCP >/dev/null 2>&1)
+
 #for huawei5330
 #upnpc -u http://192.168.8.1:54008/rootDesc.xml -r 80 TCP
