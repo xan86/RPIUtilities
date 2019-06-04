@@ -1,12 +1,9 @@
 #!/bin/bash
-# chmod +x /path/wifiKeepalive.sh
-# sudo nano /etc/crontab
-# */10 * * * * /bin/bash /home/pi/RPIUtilities/wifiKeepalive.sh >/dev/null 2>&1
-# or directly
-# sudo bash wifiKeepalive.sh
-# force stop
+# sudo crontab -e
+# */10 * * * * /home/pi/RPIUtilities/wifiKeepalive.sh >/dev/null 2>&1
+# or directly try
 # sudo ifconfig wlan0 down
-# and try
+# sudo bash wifiKeepalive.sh
 
 #SERVER=8.8.8.8
 #Let's do local ping and do not disturbe google
